@@ -1,0 +1,57 @@
+\usepackage[dvipsnames]{xcolor}
+\usepackage{tikz}
+\usepackage{fontspec}
+
+\tikzset{pentacle/.pic={
+	\coordinate (c0) at (0,0);
+	\coordinate (c1) at (90:2cm);
+	\coordinate (c2) at (18:2cm);
+	\coordinate (c3) at (306:2cm);
+	\coordinate (c4) at (234:2cm);
+	\coordinate (c5) at (162:2cm);
+	
+	\path (c1) -- coordinate[midway] (d1) (c3);
+	\path (c2) -- coordinate[midway] (d2) (c4);
+	\path (c3) -- coordinate[midway] (d3) (c5);
+	\path (c4) -- coordinate[midway] (d4) (c1);
+	\path (c5) -- coordinate[midway] (d5) (c2);
+	
+	\node[draw, ultra thick, circle, inner sep = 0pt, minimum size = 5cm, fill=Purple, double=yellow, double distance=1.5mm, transform shape] (coin) at (0,0) {};
+	
+	%\draw[ultra thick, double=yellow, double distance=1mm] (c1) -- (c0);
+	%\draw[ultra thick, double=yellow, double distance=1mm] (c2) -- (c0);
+	%\draw[ultra thick, double=yellow, double distance=1mm] (c3) -- (c0);
+	%\draw[ultra thick, double=yellow, double distance=1mm] (c4) -- (c0);
+	%\draw[ultra thick, double=yellow, double distance=1mm] (c5) -- (c0);
+	
+	\draw[ultra thick, double=yellow, double distance=1mm] (c1) -- (c2);
+	\draw[ultra thick, double=yellow, double distance=1mm] (c2) -- (c3);
+	\draw[ultra thick, double=yellow, double distance=1mm] (c3) -- (c4);
+	\draw[ultra thick, double=yellow, double distance=1mm] (c4) -- (c5);
+	\draw[ultra thick, double=yellow, double distance=1mm] (c5) -- (c1);
+	
+	\draw[ultra thick, double=yellow, double distance=1mm] (c1) -- (d1);
+	\draw[ultra thick, double=yellow, double distance=1mm] (c2) -- (d2);
+	\draw[ultra thick, double=yellow, double distance=1mm] (c3) -- (d3);
+	\draw[ultra thick, double=yellow, double distance=1mm] (c4) -- (d4);
+	\draw[ultra thick, double=yellow, double distance=1mm] (c5) -- (d5);
+	
+	\draw[ultra thick, double=yellow, double distance=1mm] (d1) -- (c3);
+	\draw[ultra thick, double=yellow, double distance=1mm] (d2) -- (c4);
+	\draw[ultra thick, double=yellow, double distance=1mm] (d3) -- (c5);
+	\draw[ultra thick, double=yellow, double distance=1mm] (d4) -- (c1);
+	\draw[ultra thick, double=yellow, double distance=1mm] (d5) -- (c2);
+	
+	\node[fill=yellow, circle, inner sep=0pt, minimum size=0.66mm, transform shape] () at (d1) {};
+	\node[fill=yellow, circle, inner sep=0pt, minimum size=0.66mm, transform shape] () at (d2) {};
+	\node[fill=yellow, circle, inner sep=0pt, minimum size=0.66mm, transform shape] () at (d3) {};
+	\node[fill=yellow, circle, inner sep=0pt, minimum size=0.66mm, transform shape] () at (d4) {};
+	\node[fill=yellow, circle, inner sep=0pt, minimum size=0.66mm, transform shape] () at (d5) {};
+	
+	\node[draw, ultra thick, black, fill=yellow, circle, inner sep = 1.5mm, transform shape] (n0) at (0,0) {};
+	\node[draw, ultra thick, black, fill=yellow, circle, inner sep = 1.5mm, transform shape] (n1) at (90:2cm) {};
+	\node[draw, ultra thick, black, fill=yellow, circle, inner sep = 1.5mm, transform shape] (n2) at (18:2cm) {};
+	\node[draw, ultra thick, black, fill=yellow, circle, inner sep = 1.5mm, transform shape] (n3) at (306:2cm) {};
+	\node[draw, ultra thick, black, fill=yellow, circle, inner sep = 1.5mm, transform shape] (n4) at (234:2cm) {};
+	\node[draw, ultra thick, black, fill=yellow, circle, inner sep = 1.5mm, transform shape] (n5) at (162:2cm) {};
+}}

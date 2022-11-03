@@ -1,0 +1,185 @@
+\documentclass[a6paper, parskip=half, DIV=14, 11pt]{scrartcl}
+\usepackage{pentacle}
+\usepackage{contour}
+\usepackage[pass]{geometry}
+
+\usepackage{fontspec}
+
+\usepackage{booktabs}
+\usepackage{multicol}
+\setlength\columnsep{3em}
+\usepackage{enumitem}
+\usepackage{caption}
+\usepackage{scrlayer-scrpage} % Manage headers and footers in Koma-Script document classes
+\setlength{\footskip}{1cm}
+
+\usepackage[type={CC}, version={4.0}, modifier={by}]{doclicense} % Add text and icons for creative commons license
+\usepackage{array}
+\usepackage{afterpage}
+
+\usepackage[hidelinks]{hyperref} % Add hyperlinks to the pdf file. This should usually be the last package loaded before \begin{document}
+
+\setmainfont{TeX Gyre Pagella}
+\makeatletter
+\newcommand{\version}[1]{\newcommand{\@version}{#1}}
+\makeatother
+
+% Set header
+\clearpairofpagestyles
+\makeatletter
+\cfoot*{{\setmainfont{Glass Antiqua} \normalshape Version \@version}}
+\makeatother
+
+% Minimize unwanted hyphenation
+\tolerance=1
+\emergencystretch=\maxdimen
+\hyphenpenalty=10000
+\hbadness=10000
+
+\setkomafont{section}{\setmainfont{Half Full NF}\Large}
+\setkomafont{subsection}{\setmainfont{Half Full NF}\large}
+\setkomafont{subsubsection}{\setmainfont{Half Full NF}\normalsize}
+\setkomafont{descriptionlabel}{\setmainfont{Half Full NF}\normalsize}
+
+\RedeclareSectionCommand[
+  runin=false,
+  afterindent=false,
+  beforeskip=0pt,
+  afterskip=0ex,
+]{section}
+
+\RedeclareSectionCommand[
+  runin=false,
+  afterindent=false,
+  beforeskip=0pt,
+  afterskip=0ex,
+]{subsection}
+
+\RedeclareSectionCommand[
+  runin=false,
+  afterindent=false,
+  beforeskip=0pt,
+  afterskip=0ex,
+]{subsubsection}
+
+\version{0.1}
+\begin{document}
+%{%
+%\thispagestyle{empty}
+%		\enlargethispage{3.5\baselineskip} % Move the bottom line (author and date) down a bit
+%\setmainfont[Scale=1.0]{Glass Antiqua}
+%\begin{center}
+%\setmainfont[Scale=1.875]{Half Full NF}
+%\Huge
+%\vfill{}
+%Pentacle
+%\vfill{}
+%\begin{tikzpicture}
+%	\pic[scale=1.575] () at (0,0) {pentacle};
+%\end{tikzpicture}
+%\vfill{}
+%\setmainfont[Scale=2.75]{Glass Antiqua}
+%\scriptsize
+%Designed by Michael Purcell
+%\setmainfont[Scale=1.55]{Glass Antiqua}
+%
+%\makeatletter
+%{Version \@version}
+%\makeatother
+%\end{center}
+%}%
+
+{%
+\newgeometry{left=0cm, right=0cm, top=1.25cm, bottom=2.25cm}
+\thispagestyle{empty}
+		\enlargethispage{3.5\baselineskip} % Move the bottom line (author and date) down a bit
+\setmainfont[Scale=1.0]{Glass Antiqua}
+\begin{center}
+\setmainfont[Scale=1.875]{Half Full NF}
+\Huge
+\vfill{}
+Pentacle
+\vfill{}
+\end{center}
+\begin{tikzpicture}
+%	\pic[scale=1.575] () at (0,0) {pentacle};
+	\node[inner sep=0pt, outer sep=0pt] () at (0,0) {\includegraphics[scale=1.07]{Images/ace_of_pentacles.png}};
+\end{tikzpicture}
+\begin{center}
+\vfill{}
+\setmainfont[Scale=2.75]{Glass Antiqua}
+\scriptsize
+Designed by Michael Purcell
+\setmainfont[Scale=1.55]{Glass Antiqua}
+
+\makeatletter
+{Version \@version}
+\makeatother
+\end{center}
+\restoregeometry
+}%
+
+%{%
+%\newgeometry{left=0cm, right=0cm, top=1.25cm, bottom=2.25cm}
+%\thispagestyle{empty}
+%		\enlargethispage{3.5\baselineskip} % Move the bottom line (author and date) down a bit
+%\setmainfont[Scale=1.0]{Glass Antiqua}
+%\begin{center}
+%\setmainfont[Scale=1.875]{Half Full NF}
+%\Huge
+%\vfill{}
+%Pentacle
+%\vfill{}
+%\end{center}
+%\begin{tikzpicture}
+%%	\pic[scale=1.575] () at (0,0) {pentacle};
+%	\node[inner sep=0pt, outer sep=0pt] () at (0,0) {\includegraphics[scale=1.07]{ace_of_pentacles.png}};
+%	
+%	\node[text width=5cm] () at (2.25cm, -3.5cm) {{\Huge Designed by}};
+%	\node[text width=5cm] () at (2.25cm, -4.25cm) {{\Huge Michael Purcell}};
+%\end{tikzpicture}
+%\begin{center}
+%\vfill{}
+%%\setmainfont[Scale=2.75]{Glass Antiqua}
+%\scriptsize
+%%Designed by Michael Purcell
+%\setmainfont[Scale=1.55]{Glass Antiqua}
+%
+%\makeatletter
+%{Version \@version}
+%\makeatother
+%\end{center}
+%\restoregeometry
+%}%
+%\newpage
+\setmainfont{TeX Gyre Schola}%
+\raggedright%
+\section*{Overview}
+Test
+
+\newpage
+\section*{Components}
+Test
+
+\newpage
+\section*{Setup}
+test
+
+\newpage
+\section*{Playing the Game}
+test
+
+\newpage
+\section*{Acknowledgments}
+test
+
+\vfill
+\hrulefill
+
+\textbf{Game Design}: Michael Purcell\\
+\textbf{Contact}: \href{mailto:pentacle.game@gmail.com}{pentacle.game@gmail.com}\\
+\begin{tabular}{@{}m{\columnwidth-\widthof{\Huge{\doclicenseIcon}}-0.5cm}@{\hspace{0.05cm}}m{\widthof{\Huge{\doclicenseIcon}}}@{}}
+{\textbf{License}: This work is licensed\newline under a ``CC BY 4.0'' license.} & \Huge{\doclicenseIcon}\\
+\end{tabular}
+
+\end{document}

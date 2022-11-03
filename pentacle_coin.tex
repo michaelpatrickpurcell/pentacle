@@ -1,0 +1,19 @@
+\documentclass{standalone}
+\usepackage{pentacle}
+
+\usepackage{fontspec}
+\setmainfont[Scale=2.0]{Macondo}
+\setmainfont[Scale=2.0]{Glass Antiqua}
+
+\begin{document}
+\begin{tikzpicture}
+
+%\setmainfont[Scale=2.0]{URWClassico};
+%\setmainfont[Scale=2.0]{Glass Antiqua};
+\node (text) at (0, 3.75cm) {{\Huge \textcolor{black}{Pentacle}}};
+%\setmainfont[Scale=2.0]{URWClassico};
+\node (tag) at (0, -3.25cm) {{\scriptsize \textcolor{black}{Designed by Michael Purcell}}};
+
+\pic () at (0,0) {pentacle};
+\end{tikzpicture}
+\end{document}

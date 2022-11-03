@@ -1,2 +1,4 @@
-# pentacle
-A frightfully cheerful word game
+# Pentacle
+A frightfully cheerful word game by Michael Purcell
+
+
